@@ -1,0 +1,191 @@
+<html>
+<head>
+	<!--[if lt IE 9] COMPATIBILITA HTML5>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![end if]-->
+	<meta charset="utf-8">
+	<title>JustCinema Sito Web HTML5</title>
+	<link rel="stylesheet" href="html5ResetStyleSheet.css" type="text/css"> <!-- resetta impostazioni di default vecchi browser per renderli compatibili con HTML5 -->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href="opensanscondensed.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="nav.js"></script>
+	<script type="text/javascript" src="footer.js"></script>
+	<!--FUNZIONI JAVASCRIPT PER IL CONTROLLO DEL FORM-->
+	<script type="text/javascript">
+		function validaCommento(){
+			if(document.getElementById("fontform").nome.value==""){
+					alert("Per favore inserisci il nickname.");
+					return false
+				}
+			if(document.getElementById("fontform").richieste.value==""){
+					alert("Per favore inserisci il commento.");
+					return false
+				}
+			if(document.getElementById("fontform").email.value==""){
+					alert("Per favore inserisci la tua mail.");
+					return false
+				}
+				
+			if(document.getElementById("fontform").film.value==1){
+					alert("Per favore inserisci il film visto.");
+					return false
+				}
+			alert("Grazie per aver commentato!");
+			return true;
+			
+		}
+	</script>
+	
+	
+	
+	<!-- importo jquery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#espandi").click(function(){
+				if(parseInt($("#area").css("height"))==400){ 
+					$("#espandi").text("Espandi");
+					$("#area").css("height", "100");			//espande e riduce il bottone!!
+					}
+				else {
+					$("#area").css("height", "400");
+					$("#espandi").text("Riduci");
+				}
+			});
+		});
+	</script>
+	
+
+	<script>
+	$(document).ready(function(){
+			$("#area").fadeTo(0,0.5); //parametri: velocità,opacità
+			$("#area").hover(function(){ //hover:al passaggio del mouse
+				$(this).fadeTo("fast",1);
+			},function(){
+				$(this).fadeTo("fast",0.5);
+			}
+			);
+	});
+	</script>
+	
+</head>
+<body>
+	
+	<div id = "container" itemscope itemtype="index.html">
+		
+	<!---SCRIVE LA VARIABILE INCLUSIONE  SUL FILE HTML-->	
+
+	<nav>
+		<script type="text/javascript"> 
+		document.write(inclusione);
+		</script>
+	</nav>
+	
+	
+	
+	<header id = "nomeCinema">
+		<span> Lascia un commento! </span>
+	</header>
+	
+	
+	<form id="fontform">
+	
+		<br>
+		<br>
+		<span>Nickname:</span>
+		<input type="text" name="nome"  maxlength = "20" autofocus required> *
+		
+		<br>
+		<br>
+		<span>Email:</span>
+		<input type="email" name="email" maxlength="30" required > *
+	
+	
+		<br>
+		<br>
+		
+		<!--MENU A TENDINA SCELTA DEL FILM-->
+		<span>Sono andato a vedere:</span>
+			
+			<select name="film" size =1>
+						<option value="1" selected ></option>
+						<option value="2">MEMENTO</option>
+						<option value="3">THE GUARDIAN</option>
+						<option value="4">FROZEN - IL REGNO DI GHIACCIO</option>
+						<option value="5">AMERICAN SNIPER</option>
+						<option value="6">STAR WARS EPISODE VII</option>
+						<option value="7">TOY STORY</option>
+						<option value="8">GUARDIANI DELLA GALASSIA</option>
+						<option value="9">THE HATETFUL EIGHT</option>
+						<option value="10">INTERSTELLAR</option>
+						<option value="11">TAXI DRIVER</option>
+						<option value="12">THE WOLF OF WALL STREET</option>	
+		</select>	
+	
+		<!--MENU A TENDINA SCELTA DEL CINEMA-->
+		<span>nel cinema:</span>
+			
+			<select name="cinema" size =1>
+						<option value="1" selected >Cinema Roma</option>
+						<option value="2">Arca Multiplex</option>
+						<option value="3">Maestoso</option>
+						<option value="4">Teatro Adriano</option>
+						<option value="5">Lux Cinema</option>
+						<option value="6">Colosseo</option>
+						<option value="7">The Space</option>
+						<option value="8">Impero</option>
+						<option value="9">Don Bosco</option>
+						<option value="10">Jolly</option>
+						<option value="11">Odeon</option>
+						<option value="12">Madison</option>	
+			</select>
+			
+		<br>
+		<br>
+		
+		<span>Ecco cosa ne penso:</span>
+		
+		<br>
+		 
+		<!--BOTTONE E TEXTAREA-->
+		<span><textarea id="area"cols=100 ></textarea></span>
+		
+		<button id="espandi">Espandi</button>
+		
+		
+		<br>
+		<!--INVIO FORM-->
+		<span><input type = "submit" onClick="validaCommento()" value ="Invia il commento!"></span>
+			
+			
+			
+		<span>* </span>I campi contrassegnati sono obbligatori
+	</form>
+	
+	
+	
+
+
+
+
+	<footer>
+		<script type="text/javascript"> 
+		document.write(footer);
+		</script>
+		<div id='social'>
+			<ul>
+				<li><a href='index.html'><span>SOCIAL</span></a><li>
+				<li><a href='index.html'><span>Facebook</span></a><li>
+				<li><a href='index.html'><span>Youtube</span></a><li>
+				<li><a href='index.html'><span>Twitter</span></a><li>
+				<li><a href='index.html'><span>Instagram</span></a><li>
+				<li><a href='index.html'><span>NOTE LEGALI</span></a><li>
+				<li><a href='index.html'><span>Privacy Policy</span></a><li>
+				<li><a href='index.html'><span>Cookie Policy</span></a><li>
+				<li><a href='index.html'><span>Trasparenza</span></a><li>
+			</ul>
+		</div>
+	</footer>
+	</div>
+</body>
+</html>

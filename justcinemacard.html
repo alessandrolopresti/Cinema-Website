@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<!--[if lt IE 9] COMPATIBILITA HTML5>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![end if]-->
+	<meta charset="utf-8">
+	<title>JustCinema Sito Web HTML5</title>
+	<link rel="stylesheet" href="html5ResetStyleSheet.css" type="text/css"> <!-- resetta impostazioni di default vecchi browser per renderli compatibili con HTML5 -->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href="opensanscondensed.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="nav.js"></script>
+	<script type="text/javascript" src="footer.js"></script>
+	
+	<!--FUNZIONE RESET-->
+	<script>
+		function reset() {
+			document.getElementById("myForm").reset();
+		}
+	</script>
+	
+	
+	<!--FUNZIONE PER CONVALIDARE IL FORM-->
+	<script type="text/javascript">
+		function validaForm() {
+			<!---CONVALIDO NOME-->
+			if (document.getElementById("myForm").nome.value=="") {
+				document.getElementById("myForm").nome.style.borderColor='red';
+				alert("Inserire il proprio nome");
+				return false;
+				}
+			else	{
+				document.getElementById("myForm").nome.style.borderColor='#191919';
+				}
+			<!---CONVALIDO COGNOME-->
+			if (document.getElementById("myForm").cognome.value=="") {
+				document.getElementById("myForm").cognome.style.borderColor='red';
+				alert("Inserire il proprio cognome");
+				return false;
+				}
+			else	{
+				document.getElementById("myForm").cognome.style.borderColor='#191919';
+				}
+			<!---CONVALIDO NASCITA-->
+			if (document.getElementById("myForm").nascita.value=="") {
+				document.getElementById("myForm").nascita.style.borderColor='red';
+				alert("Inserire la propria data di nascita");
+				return false;
+				}
+			else	{
+				document.getElementById("myForm").nascita.style.borderColor='#191919';
+				}
+				<!---CONVALIDO SESSO E REGIONE-->
+			if (document.getElementById("myForm").sesso.value=="nessuna") {
+				document.getElementById("myForm").sesso.style.borderColor='red';
+				alert("Inserire il proprio sesso");
+				return false;
+				}
+			else	{
+				document.getElementById("myForm").sesso.style.borderColor='#191919';
+				}
+			if (document.getElementById("myForm").regione.value=="nessuna") {
+				document.getElementById("myForm").regione.style.borderColor='red';
+				alert("Selezionare una regione");
+				return false;
+			}
+			else	{
+				document.getElementById("myForm").regione.style.borderColor='#191919';
+			}
+			
+			<!---CONVALIDO CAP e MAIL-->
+			var v = parseInt(document.getElementById("myForm").cap.value);
+			if (isNaN(v)) {
+				document.getElementById("myForm").cap.style.borderColor='red';
+				alert("Il CAP deve essere un numero di 5 cifre");
+				return false;
+				}
+			else	{
+				document.getElementById("myForm").cap.style.borderColor='#191919';
+				}
+			if (document.getElementById("myForm").email.value=="") {
+				document.getElementById("myForm").email.style.borderColor='red';
+				alert("Inserire l'email");
+				return false;
+			}
+			else	{
+				document.getElementById("myForm").email.style.borderColor='#191919';
+			}
+			<!---CONVALIDO REGOLAMENTO E INORMTATIVA-->
+			if (document.getElementById("myForm").regolamento.value=="nonacconsento")	{
+				alert("Per proseguire è necessario dare il consenso del regolamento");
+				return false;
+			}
+			if(document.getElementById("myForm").informativa.value=="nonacconsento")	{
+				alert("Per proseguire è necessario dare il consenso sull'informativa");
+				return false;
+			}
+			alert("Dati inseriti correttamente. Benvenuto nella community!");
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<div id = "container" itemscope itemtype="http://linguaggietecnologieweb.altervista.org/">
+		
+	<!---SCRIVE LA VARIABILE INCLUSIONE  SUL FILE HTML-->	
+	<nav>
+		<script type="text/javascript"> 
+		document.write(inclusione);
+		</script>
+	</nav>
+	
+	
+	<!---TITOLO -->	
+	<header id ="nomeCinema">
+		<span>JUSTCINEMA CARD</span>
+	</header>
+	
+	
+	<form id = "myForm">
+			
+		<!---BANNER1-->	
+		<section class = "card">
+			<h4>I TUOI DATI</h4>
+		</section>
+		
+		
+		<article class = "corpocard">
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Nome:</h4>
+				</div>
+				<div class = "casella">
+				<input type="text" name="nome"  maxlength = "20" autofocus required> *
+				</div>
+			</div>
+			<div class = "daticardright">
+				<div class = "attributo">
+					<h4>Regione di residenza:</h4>
+				</div>
+				<div class = "casella">
+					<select name="regione" required>
+						<option value="nessuna" selected></option>
+						<option value="valdaosta">Val d'Aosta</option>
+						<option value="piemonte">Piemonte</option>
+						<option value="liguria">Liguria</option>
+						<option value="lombardia">Lombardia</option>
+						<option value="veneto">Veneto</option>
+						<option value="trentino">Trentino Alto Adige</option>
+						<option value="friuli">Friuli Venezia-Giulia</option>
+						<option value="emilia">Emilia-Romagna</option>
+						<option value="toscana">Toscana</option>
+						<option value="marche">Marche</option>
+						<option value="umbria">Umbria</option>
+						<option value="lazio">Lazio</option>
+						<option value="abruzzo">Abruzzo</option>
+						<option value="molise">Molise</option>
+						<option value="campania">Campania</option>
+						<option value="basilicata">Basilicata</option>
+						<option value="puglia">Puglia</option>
+						<option value="calabria">Calabria</option>
+						<option value="sicilia">Sicilia</option>
+						<option value="sardegna">Sardegna</option>
+					</select> *
+				</div>
+			</div>
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Cognome:</h4>
+				</div>
+				<div class = "casella">
+				<input type="text" name="cognome" maxlength="30" required> *
+				</div>
+			</div>
+			<div class = "daticardright">
+				<div class = "attributo">
+					<h4>CAP:</h4>
+				</div>
+				<div class = "casella">
+				<input type="text" name="cap" maxlength="5" pattern="[0-9]{5}" required> *
+				</div>
+			</div>
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Data di nascita:</h4>
+				</div>
+				<div class = "casella">
+				<input type="date" name="nascita" required> *
+				</div>
+			</div>
+			<div class = "daticardright">
+				<div class = "attributo">
+					<h4>Cellulare:</h4>
+				</div>
+				<div class = "casella">
+				<input type="tel" name="cellulare" maxlength="10">
+				</div>
+			</div>
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Sesso:</h4>
+				</div>
+				<div class = "casella">
+				<select name="sesso" required>
+						<option value="nessuna" selected></option>
+						<option value="uomo">Uomo</option>
+						<option value="donna">Donna</option>
+				</select> *
+				</div>
+			</div>
+		</article>
+		
+		
+		<!---BANNER2-->	
+		<section class = "card">
+			<h4>QUALE JUSTCINEMA FREQUENTI ABITUALMENTE?</h4>
+		</section>
+		
+		
+		<article class = "corpocard">
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Cinema frequentato:</h4>
+				</div>
+				<div class = "casella">
+				<select name="cinema">
+						<option value="nessuna" selected></option>
+						<option value="1">Cinema Roma</option>
+						<option value="2">Arca Multiplex</option>
+						<option value="3">Maestoso</option>
+						<option value="4">Teatro Adriano</option>
+						<option value="5">Lux Cinema</option>
+						<option value="6">Colosseo</option>
+						<option value="7">The Space</option>
+						<option value="8">Impero</option>
+						<option value="9">Don Bosco</option>
+						<option value="10">Jolly</option>
+						<option value="11">Odeon</option>
+						<option value="12">Madison</option>	
+				</select>
+				</div>
+			</div>
+		</article>
+		
+		<!---BANNER3-->	
+		<section class = "card">
+			<h4>INSERISCI LA TUA EMAIL E SCEGLI LA PASSWORD PER L'AREA RISERVATA</h4>
+		</section>
+		<article class = "corpocard">
+			<div class = "daticardleft">
+				<div class = "attributo">
+					<h4>Email:</h4>
+				</div>
+				<div class = "casella">
+				<input type="email" name="email" maxlength="30" required> *
+				</div>
+			</div>
+			<div class = "daticardright">
+				<div class = "attributo">
+					<h4>Password:</h4>
+				</div>
+				<div class = "casella">
+				<input type="password" name="password" maxlength="15" required> *
+				</div>
+			</div>
+		</article>
+		
+		<!---BANNER4-->	
+		<section class = "card">
+			<h4>LEGGI IL REGOLAMENTO</h4>
+		</section>
+		<article class = "corpocard">
+				<div class = "sceltaradio">
+					<h4>Ho letto il regolamento e:</h4><br>
+						<input type="radio" name="regolamento" value="acconsento" checked> acconsento<br>
+						<input type="radio" name="regolamento" value="nonacconsento"> non acconsento<br>
+				</div>
+		</article>
+		
+		
+		<!---BANNER5-->	
+		<section class ="card">
+			<h4>LEGGI L'INFORMATIVA SUL TRATTAMENTO DEI TUOI DATI PERSONALI</h4>
+		</section>
+		<article class = "corpocard">
+				<div class = "sceltaradio">
+					<h4>Ho letto l'informativa sul trattamento dei miei dati personali e:</h4><br>
+						<input type="radio" name="informativa" value="acconsento" checked> acconsento<br>
+						<input type="radio" name="informativa" value="nonacconsento"> non acconsento<br>
+				</div>
+		</article>
+		<article class = "corpocard">
+				<div id = "legenda">
+					<span>* </span>I campi contrassegnati sono obbligatori
+				</div>
+		</article>
+		<div id = "registrazione">
+				<input type="submit" onclick="validaForm()" value="Continua">
+				<input type="reset" onclick="reset()" value="Reset form">
+		</div>
+	</form>
+	<footer>
+		<script type="text/javascript"> 
+		document.write(footer);
+		</script>
+		<div id='social'>
+			<ul>
+				<li><a href='index.html'><span>SOCIAL</span></a><li>
+				<li><a href='index.html'><span>Facebook</span></a><li>
+				<li><a href='index.html'><span>Youtube</span></a><li>
+				<li><a href='index.html'><span>Twitter</span></a><li>
+				<li><a href='index.html'><span>Instagram</span></a><li>
+				<li><a href='index.html'><span>NOTE LEGALI</span></a><li>
+				<li><a href='index.html'><span>Privacy Policy</span></a><li>
+				<li><a href='index.html'><span>Cookie Policy</span></a><li>
+				<li><a href='index.html'><span>Trasparenza</span></a><li>
+			</ul>
+		</div>
+	</footer>
+	</div>
+	
+</body>
+</html>

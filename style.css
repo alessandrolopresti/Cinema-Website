@@ -1,0 +1,133 @@
+﻿
+*{margin: 0; padding:0;} /* vale per tutti gli elementi: sono impostazioni di default affinché vi sia compatibilità con tutti i browser */
+body	{font-family: Arial,Helvetica,Sans-serif; background-image: url(/home/chuck/Scrivania/Web/sito/images/PROVA.jpg);}
+
+
+/* Container */
+#container  {width:960px; margin: 0 auto; padding: 60px 0px 0px 0px;} /* la combinazione "margin: 0 auto;" permette di centrare la pagina */
+
+/* margin specifica lo spazio che deve esistere tra il box e gli altri elementi della pagina */
+/* il padding stabilisce lo spazio che deve essere lasciato tra i contenuti di un riquadro e il suo bordo o il suo margine (qualora non esistesse un bordo) */
+/* border indica il bordo di un box */
+
+/*----------------------------------------------------FORM-------------------------------------------*/
+#fontform {width: 956px;padding:0px 0px 100px 0px;float: left;background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 2px;}
+#fontform span{padding: 20px 0px 20px 0px;margin: 30px;font-family: 'Open Sans Condensed', sans-serif; font-size:20px;}
+#fontform textarea{width:600px; height:100px;}
+
+
+
+/*----------------------------------------------------NAV-------------------------------------------*/
+
+/* Menù di navigazione */
+nav {font-family: 'Open Sans Condensed', sans-serif; font-weight: bold; background: #191919; width: 956px; float: left; border: 2px solid #fff;}
+nav ul  {list-style-type: none;}
+nav ul  li  {float: left; border-right: 1px dotted #fff; font-size: 20px;}
+nav a:link,  a:visited  {color: #fff; text-decoration: none; padding: 10px 30px; display: block;} /* :link si riferisce a tutti i collegamenti non visitati mentre :visited si riferisce a tutti i collegamenti già visitati | display: block fa sì che ogni link sia un blocco */
+nav a:hover {background-color: #9bc2e5; color: #051d33;} /* a:hover si riferisce a tutti i link sopra i quali si posiziona il puntatore */
+a   {color: #000000;}
+ 
+ 
+/*<---------------------------------------HEADER------------------------>*/
+
+/*file:index*/
+#slideshow{float: left; width: 956px; font-size: 0px;}
+#slideshow img	{border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+
+/*file: filmcx e supporto*/
+#nomeCinema{text-align:center; border-bottom-color:white; border-bottom-style: solid; border-bottom-width: 2px; padding: 60px 30px; font-family: 'Open Sans Condensed', sans-serif;background:#191919; width: 896px; float: left;border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+#nomeCinema span { margin: 0px; color: #fff; font-size: 99px; font-weight: bold;}
+ 
+/* file: index */
+#descrizione    {width: 956px; float: left; background: #191919; font-family: 'Open Sans Condensed', sans-serif;}
+#descrizione h4 {padding: 15px 30px; margin: 0px; color: #fff; font-size: 60px; font-weight: bold;}
+
+
+
+
+
+ /*<--------------------------------SECTION------------------------------------>*/
+ 
+/* Corpo centrale Home (file:index) */
+#sezioneCinema {float: left; width: 956px; background: #dee0e2; border: 2px solid #fff; padding: 0px 0px 15px 0px;}
+
+/* Acquisto biglietto (file: prenotazione)*/
+
+#prenotazione {float: left; width: 896px; background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 2px;font-family: 'Open Sans Condensed', sans-serif; font-size: 20px; padding: 30px;}
+.giustificato {float: left; width: 250px;}
+
+
+/*div per i menu di food e drink e supporto*/
+#food	{float: left; width: 956px; font-size: 0px;}
+#food img	{border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+
+/* Sezioni riguardanti iscrizione JustCinema Card */
+
+.card {float: left; width: 956px; font-size: 35px; background: #191919; font-family: 'Open Sans Condensed', sans-serif; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+.card h4 {padding: 15px 30px; color: #fff; }
+
+
+
+
+
+
+
+
+/*--------------------------------------ARTICLE----------------------------------------->*/
+
+/* Article id del cinema*/ 
+.sala{width: 214px; float: left; padding: 20px 0px 0px 18px;}
+.sala img {border: 2px solid #fff;}
+.sala h4{margin: 0; text-align: center; font-family: 'Open Sans Condensed', sans-serif; font-size: 24px; padding: 5px 0px 0px 0px;}
+ 
+ /*Article id del Film*/
+.film {width: 956px; float: left;background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+.film p{padding: 10px 30px 20px 0px;margin:0; font-family: 'Open Sans Condensed', sans-serif; font-size: 24px;}
+.film img {float:left; padding: 20px 10px 20px 30px;}
+.film h2 {padding: 20px 30px 20px 0px;font-family: 'Open Sans Condensed', sans-serif; font-size: 40px;}
+
+/*Article per la descrizione in supporto*/
+#supporto {width: 956px; float: left;background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px;}
+#supporto p{padding: 20px 30px 0px 30px; margin:0; font-family: 'Open Sans Condensed', sans-serif; font-size: 24px;}
+#supporto h2 {padding: 20px 30px; font-family: 'Open Sans Condensed', sans-serif; font-size: 40px;}
+
+.corpocard{width: 956px; float: left; background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px; font-family: 'Open Sans Condensed', sans-serif; padding: 20px 0px;}
+
+
+
+
+
+
+/*<-------------------------------------FOOTER------------------------------------>*/
+
+/* footer-Piè di pagina */
+footer {width: 956px; float: left; background:  #191919; color: #fff; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 2px;}
+footer span {margin:0; font-family: 'Open Sans Condensed', sans-serif; font-size: 16px;}
+footer a:link,a:visited  {color: #fff; text-decoration: none; padding: 10px 0px; display: block;}
+footer ul  {list-style-type: none;}
+#justcinema,#aiuto {width: 289px; float: left;background:  #191919; padding: 20px 0px 20px 30px;}
+#social {width: 288px; float: left;background:  #191919;padding: 20px 0px 20px 30px;}
+
+/*<--------------------------------DIV-------------------------------------------->*/
+
+/* div per prenotare il biglietto dalla sezione film di ciascun cinema */
+#prenota {width: 956px; float: left;background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px; text-align: center; padding: 0px 0px 20px 0px;}
+#prenota input {background: #191919; border: 1px solid #191919; color: #fff; font-size: 30px; line-height: 40px; width: 300px; padding: 0px 10px;}
+
+/* div per registrazione JustCinema Card */
+
+	
+	.daticardleft {float: left; width: 440px; border-bottom-color: #191919; border-bottom-style: solid; border-bottom-width: 2px; margin: 0px 0px 0px 30px;}
+	.daticardright	{float: right; width: 440px; border-bottom-color: #191919; border-bottom-style: solid; border-bottom-width: 2px; margin: 0px 30px 0px 0px;}
+	.attributo {float: left; width: 190px; padding: 10px 0px 10px 10px; font-size: 20px; font-weight: bold; }
+	.casella {float: left; width: 240px; color: #191919; padding: 10px 0px; font-weight: bold; }
+	.casella input, select {width: 220px; height: 25px; border: 1px solid #191919; box-sizing:border-box;} /* box-sizing serve per modificare le impostazioni di default dei browser in modo da poter impostare correttamente altezza e larghezza dei box */
+	.sceltaradio	{float: left; width: 880px; color: #191919; padding: 10px 10px; font-size: 20px; font-weight: bold;  border-bottom-style: solid; border-bottom-width: 2px; margin: 0px 30px 0px 30px; }
+
+	
+	
+	#legenda {margin: 0px 30px 15px 30px; color: #191919; font-family: 'Open Sans Condensed', sans-serif; font-size: 16px;}
+	#legenda span {font-size: 20px; font-weight: bold; box-sizing: border-box;}
+	#registrazione {width: 956px; float: left;background: #dee0e2; border-left-color: white; border-left-style: solid; border-left-width: 2px; border-right-color: white; border-right-style: solid; border-right-width: 2px; text-align: center; padding: 0px 0px 20px 0px; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 2px;}
+	#registrazione input {background: #191919; border: 1px solid #191919; color: #fff; font-size: 30px; line-height: 40px; width: 300px; padding: 0px 10px;}
+	#poltrone {float: left; padding: 0px 430px 30px 0px;}

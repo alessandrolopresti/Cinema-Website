@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<!--[if lt IE 9] COMPATIBILITA HTML5>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![end if]-->
+	<meta charset="utf-8">
+	<title>JustCinema Sito Web HTML5</title>
+	<link rel="stylesheet" href="html5ResetStyleSheet.css" type="text/css"> <!-- resetta impostazioni di default vecchi browser per renderli compatibili con HTML5 -->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href="opensanscondensed.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="nav.js"></script>
+	<script type="text/javascript" src="footer.js"></script>
+	
+	
+	<script language="javascript">
+	<!---F1:QUANDO CARICO LA FINESTRA MI CREO UN VETTORE DI IMAGES E MI METTO IN ASCOLTO-->	
+		window.onload = function()	{
+			var buttons = document.images;
+			for(var i = 0; i < buttons.length; i++) {
+				buttons[i].addEventListener("click", function(e) { 
+				if (e.target.src == "file:///home/chuck/Scrivania/Web/sito/images/verde.png")	{
+					e.target.src = "file:///home/chuck/Scrivania/Web/sito/images/giallo.png";
+					}
+				else	{
+					e.target.src = "file:///home/chuck/Scrivania/Web/sito/images/verde.png";
+				
+				}
+				});
+			}
+		};
+		
+		<!---F2-->	
+		function resettiamo() {
+			var posti = document.getElementsByTagName('img'); // crea un vettore di tutte le immagini presenti in questa pagina web
+			for(var k = 0; k < posti.length; k++) { // per ogni possibile immagine all'interno della pagina web
+				posti.item(k).setAttribute('src', "images/verde.png");
+			}
+			document.getElementById("prenotazione").reset();
+			lista_film = resetto;
+			
+		}
+		<!---F3-->	
+		function backtoIndex(){
+			if(document.form.nome.value==""){
+					alert("Per favore inserisci un nome valido.");
+					return false;
+				}
+			if(document.form.cognome.value==""){
+					alert("Per favore inserisci un cognome valido.");
+					return false;
+				}
+			alert("Dati inseriti correttamente. Grazie per l'acquisto!");
+			
+			
+			return true;
+		}
+	</script>
+</head>
+
+
+<body>
+	<div id = "container" itemscope itemtype="index.html">
+		<!---SCRIVE LA VARIABILE INCLUSIONE  SUL FILE HTML-->	
+		<nav>
+			<script type="text/javascript"> 
+			document.write(inclusione);
+			</script>
+		</nav>
+		
+		
+		<form id ="prenotazione" name="form">
+			
+			<br><br>
+			<div class = "giustificato">Nome:</div>
+			<input type="text" name="nome" size="30" maxlength="20" autofocus required> *
+			<br><br>
+			
+			<div class ="giustificato">Cognome:</div>
+			<input type="text" name="cognome" size="30" maxlength="30" required> *
+			<br><br>
+			
+			<div class ="giustificato">Codice Sconto:</div>
+			<input type="text" name="cf" size="30" maxlength="6" > 
+			<br><br>
+			
+			
+			<div class ="giustificato">Cinema:</div> 
+			<select name="lista_cinema" onChange="aggiornaOpzioni();" required>
+				<option value="nessuna" selected></option>
+				<option value="1">Cinema Roma</option>
+				<option value="2">Arca Multiplex</option>
+				<option value="3">Maestoso</option>
+				<option value="4">Teatro Adriano</option>
+				<option value="5">Lux Cinema</option>
+				<option value="6">Colosseo</option>
+				<option value="7">The Space</option>
+				<option value="8">Impero</option>
+				<option value="9">Don Bosco</option>
+				<option value="10">Jolly</option>
+				<option value="11">Odeon</option>
+				<option value="12">Madison</option>
+			</select> *
+			<br><br>
+			
+			
+			<div class ="giustificato">Seleziona uno tra i film disponibili:</div>
+			<select name="lista_film" size="1" required>
+				<option value="nessuna" selected></option>
+				<option value="a">TAXI DRIVER</option>
+				<option value="b">MEMENTO</option>
+				<option value="c">THE HATETFUL EIGHT</option>
+				<option value="d">THE WOLF OF WALL STREET</option>
+				<option value="e">GUARDIANI DELLA GALASSIA</option>
+				<option value="f">FROZEN - IL REGNO DI GHIACCIO</option>
+				<option value="g">STAR WARS EPISODE VII: IL RISVEGLIO DELLA FORZA</option>
+				<option value="H">AMERICAN SNIPER</option>
+				
+			</select> *
+			<br><br>
+			
+			
+			
+			
+			<div class ="giustificato">Orario:</div>
+			<select name="orario" required>
+				<option value="nessuna" selected></option>
+				<option value="ora1">18:30</option>
+				<option value="ora2">20:30</option>
+				<option value="ora3">22:50</option>
+			</select> *
+			
+			
+			
+			<br><br><br>
+			<div id ="poltrone">
+			<img alt="posto 1" src ="images/verde.png">
+			<img alt="posto 2" src ="images/verde.png">
+			<img alt="posto 3" src ="images/verde.png">
+			<img alt="posto 4" src ="images/verde.png">
+			<img alt="posto 5" src ="images/verde.png">
+			<img alt="posto 6" src ="images/verde.png">
+			<img alt="posto 7" src ="images/verde.png">
+			<img alt="posto 8" src ="images/verde.png">
+			<img alt="posto 9" src ="images/verde.png">
+			<img alt="posto 10" src ="images/verde.png">
+			<img alt="posto 11" src ="images/verde.png">
+			<img alt="posto 12" src ="images/verde.png">
+			<img alt="posto 13" src ="images/verde.png">
+			<img alt="posto 14" src ="images/verde.png">
+			<img alt="posto 15" src ="images/verde.png">
+			<img alt="posto 16" src ="images/verde.png">
+			<img alt="posto 17" src ="images/verde.png">
+			<img alt="posto 18" src ="images/verde.png">
+			<img alt="posto 19" src ="images/verde.png">
+			<img alt="posto 20" src ="images/verde.png">
+			<img alt="posto 21" src ="images/verde.png">
+			<img alt="posto 22" src ="images/verde.png">
+			<img alt="posto 23" src ="images/verde.png">
+			<img alt="posto 24" src ="images/verde.png">
+			<img alt="posto 25" src ="images/verde.png">
+			<img alt="posto 26" src ="images/verde.png">
+			<img alt="posto 27" src ="images/verde.png">
+			<img alt="posto 28" src ="images/verde.png">
+			<img alt="posto 29" src ="images/verde.png">
+			<img alt="posto 30" src ="images/verde.png">
+			<img alt="posto 31" src ="images/verde.png">
+			<img alt="posto 32" src ="images/verde.png">
+			<img alt="posto 33" src ="images/verde.png">
+			<img alt="posto 34" src ="images/verde.png">
+			<img alt="posto 35" src ="images/verde.png">
+			<img alt="posto 36" src ="images/verde.png">
+			<img alt="posto 37" src ="images/verde.png">
+			<img alt="posto 38" src ="images/verde.png">
+			<img alt="posto 39" src ="images/verde.png">
+			<img alt="posto 40" src ="images/verde.png">
+			<img alt="posto 41" src ="images/verde.png">
+			<img alt="posto 42" src ="images/verde.png">
+			<img alt="posto 43" src ="images/verde.png">
+			<img alt="posto 44" src ="images/verde.png">
+			<img alt="posto 45" src ="images/verde.png">
+			<img alt="posto 46" src ="images/verde.png">
+			<img alt="posto 47" src ="images/verde.png">
+			<img alt="posto 48" src ="images/verde.png">
+			<img alt="posto 49" src ="images/verde.png">
+			<img alt="posto 50" src ="images/verde.png">
+			<img alt="posto 51" src ="images/verde.png">
+			<img alt="posto 52" src ="images/verde.png">
+			<img alt="posto 53" src ="images/verde.png">
+			<img alt="posto 54" src ="images/verde.png">
+			<img alt="posto 55" src ="images/verde.png">
+			<img alt="posto 56" src ="images/verde.png">
+			<img alt="posto 57" src ="images/verde.png">
+			<img alt="posto 58" src ="images/verde.png">
+			<img alt="posto 59" src ="images/verde.png">
+			<img alt="posto 60" src ="images/verde.png">
+			<img alt="posto 61" src ="images/verde.png">
+			<img alt="posto 62" src ="images/verde.png">
+			<img alt="posto 63" src ="images/verde.png">
+			<img alt="posto 64" src ="images/verde.png">
+			<img alt="posto 65" src ="images/verde.png">
+			<img alt="posto 66" src ="images/verde.png">
+			<img alt="posto 67" src ="images/verde.png">
+			<img alt="posto 68" src ="images/verde.png">
+			<img alt="posto 69" src ="images/verde.png">
+			<img alt="posto 70" src ="images/verde.png">
+			<img alt="posto 71" src ="images/verde.png">
+			<img alt="posto 72" src ="images/verde.png">
+			<img alt="posto 73" src ="images/verde.png">
+			<img alt="posto 74" src ="images/verde.png">
+			<img alt="posto 75" src ="images/verde.png">
+			<img alt="posto 76" src ="images/verde.png">
+			<img alt="posto 77" src ="images/verde.png">
+			<img alt="posto 78" src ="images/verde.png">
+			<img alt="posto 79" src ="images/verde.png">
+			<img alt="posto 80" src ="images/verde.png">
+			<img alt="posto 81" src ="images/verde.png">
+			<img alt="posto 82" src ="images/verde.png">
+			<img alt="posto 83" src ="images/verde.png">
+			<img alt="posto 84" src ="images/verde.png">
+			<img alt="posto 85" src ="images/verde.png">
+			<img alt="posto 86" src ="images/verde.png">
+			<img alt="posto 87" src ="images/verde.png">
+			<img alt="posto 88" src ="images/verde.png">
+			<img alt="posto 89" src ="images/verde.png">
+			<img alt="posto 90" src ="images/verde.png">
+			<img alt="posto 91" src ="images/verde.png">
+			<img alt="posto 92" src ="images/verde.png">
+			<img alt="posto 93" src ="images/verde.png">
+			<img alt="posto 94" src ="images/verde.png">
+			<img alt="posto 95" src ="images/verde.png">
+			<img alt="posto 96" src ="images/verde.png">
+		</div>
+		
+		
+
+		<input type="submit" onClick="backtoIndex()" value="Acquista biglietto">
+		
+		
+		
+		
+		<input type="reset" onClick="resettiamo()" value="Reset">
+		<br><br>
+		
+	</form>
+	<footer>
+		<script type="text/javascript"> 
+		document.write(footer);
+		</script>
+		<div id='social'>
+			<ul>
+				<li><a href='index.html'><span>SOCIAL</span></a><li>
+				<li><a href='index.html'><span>Facebook</span></a><li>
+				<li><a href='index.html'><span>Youtube</span></a><li>
+				<li><a href='index.html'><span>Twitter</span></a><li>
+				<li><a href='index.html'><span>Instagram</span></a><li>
+				<li><a href='index.html'><span>NOTE LEGALI</span></a><li>
+				<li><a href='index.html'><span>Privacy Policy</span></a><li>
+				<li><a href='index.html'><span>Cookie Policy</span></a><li>
+				<li><a href='index.html'><span>Trasparenza</span></a><li>
+			</ul>
+		</div>
+	</footer>
+	</div>
+	
+	
+</body>
+</html>
