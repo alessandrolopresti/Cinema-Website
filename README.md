@@ -14,5 +14,5 @@ As a real client oriented application, JustCinema offers a support section for a
 ## Screenshot
 
 <p align="center">
-  <img width="400" height="800" src="https://i.ibb.co/174Xsm4/Cattura.jpg">
+  <img width="300" height="600" src="https://i.ibb.co/174Xsm4/Cattura.jpg">
 </p>
