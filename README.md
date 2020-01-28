@@ -11,6 +11,14 @@ There is a section dedicated to the choice of foods and drinks and their descrip
 
 As a real client oriented application, JustCinema offers a support section for any comments, advice and reviews to improve the website feedback.
 
+## Programming Languages used
+- HTML5
+- CSS3
+- Javascript
+- AJAX
+
+
+
 ## Screenshot
 
 <p align="center">
