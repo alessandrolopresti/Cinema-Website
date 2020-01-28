@@ -7,6 +7,6 @@ Like other booking sites, "JustCinema" facilitates customers in choosing the rig
 
 The main page shows the list of cinemas that have "joined" the JustCinema chain. By selecting one of those available, it will be possible to view which films are present in order to book and pay for tickets.
 
-There is a section dedicated to the choice of foods and drinks and their description (for example, family-sized menus etc ...).
+There is a section dedicated to the choice of foods and drinks and their description (e.g. family-sized menus etc.).
 
 As a real client oriented application, JustCinema offers a support section for any comments, advice and reviews to improve the website feedback.
