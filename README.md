@@ -10,3 +10,9 @@ The main page shows the list of cinemas that have "joined" the JustCinema chain.
 There is a section dedicated to the choice of foods and drinks and their description (e.g. family-sized menus etc.).
 
 As a real client oriented application, JustCinema offers a support section for any comments, advice and reviews to improve the website feedback.
+
+## Screenshot
+
+<p align="center">
+  <img width="690" height="315" src="https://i.ibb.co/174Xsm4/Cattura.jpg">
+</p>
