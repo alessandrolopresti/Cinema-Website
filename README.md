@@ -1,4 +1,4 @@
-# Cinema-Website
+# JustCinema - Website
 
 ## Description 
 
